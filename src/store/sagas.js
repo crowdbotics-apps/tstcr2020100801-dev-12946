@@ -1,6 +1,30 @@
 import { put, call, all, spawn, takeEvery } from "redux-saga/effects"
 import { apiService } from "./services"
 import * as types from "./constants"
+function* registration_post_restauth_registration_createWorker(action) {
+  try {
+    const result = yield call(
+      apiService.registration_post_restauth_registration_create,
+      action
+    )
+    yield put(
+      actions.registration_post_restauth_registration_createSucceeded(
+        result,
+        action
+      )
+    )
+  } catch (err) {
+    yield put(
+      actions.registration_post_restauth_registration_createFailed(err, action)
+    )
+  }
+}
+function* registration_post_restauth_registration_createWatcher() {
+  yield takeEvery(
+    types.REGISTRATION_POST_RESTAUTH_REGISTRATION_CREATE,
+    registration_post_restauth_registration_createWorker
+  )
+}
 function* api_v1_customtext_listWorker(action) {
   try {
     const result = yield call(apiService.api_v1_customtext_list, action)
@@ -287,6 +311,7 @@ function* rest_auth_user_partial_updateWatcher() {
 }
 export default function* rootSaga() {
   const sagas = [
+    registration_post_restauth_registration_createWatcher,
     api_v1_customtext_listWatcher,
     api_v1_customtext_readWatcher,
     api_v1_customtext_updateWatcher,

@@ -1,8 +1,15 @@
 import axios from "axios"
+const registration = axios.create({
+  baseURL: "https://tstcr2020100801-dev-12946.botics.co",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const tstcrAPI = axios.create({
   baseURL: "https://tstcr2020100801-dev-12946-prod.herokuapp.com/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function registration_post_restauth_registration_create(action) {
+  return registration.post(`/rest-auth/registration/`, { data: action.data })
+}
 function api_v1_customtext_list(action) {
   return tstcrAPI.get(`/api/v1/customtext/`)
 }
@@ -73,6 +80,7 @@ function rest_auth_user_partial_update(action) {
   return tstcrAPI.patch(`/rest-auth/user/`, { data: action.data })
 }
 export const apiService = {
+  registration_post_restauth_registration_create,
   api_v1_customtext_list,
   api_v1_customtext_read,
   api_v1_customtext_update,
