@@ -31,7 +31,9 @@ export default class Blank extends React.Component {
         <View style={styles.View_50}>
           <Image resizeMode="cover" style={styles.Image_53} />
         </View>
-        <View style={styles.View_6} />
+        <View style={styles.View_6}>
+          <Text>This is a test component</Text>
+        </View>
         <View style={styles.View_7} />
       </View>
     </View>
