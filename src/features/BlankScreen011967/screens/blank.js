@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { registration_post_restauth_registration_create } from "../../../store/actions.js";
 import {
   View,
   Image,
@@ -8,33 +10,54 @@ import {
   Button,
   Switch,
   TextInput,
-  StyleSheet,
+  StyleSheet
 } from "react-native";
-import DateTimePicker from 'react-native-datepicker';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Slider from '@react-native-community/slider';
-import { CheckBox } from 'react-native-elements';
-import {SlideMenuIcon} from '../../../navigator/slideMenuIcon';
-
-export default class Blank extends React.Component {
-  static navigationOptions = ({navigation}) => {
-    return {
-      headerLeft: <SlideMenuIcon navigationProps={navigation} />,
+class Blank extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
     };
-  };
-  
-  state = {};
-
+  }
   render = () => (
     <View style={styles.container}>
-      <Text>This is Charath's Test Component 2020-10-08 10:26</Text>
+      <Text>Welcome to Crowdbotics</Text>
+      <TextInput
+        onChange={email => this.setState({ email: email })}
+        style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+      />
+      <TextInput
+        onChange={password => this.setState({ password: password })}
+        style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+      />
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => this.props.signup(this.state.email, this.state.password)}
+      >
+        <Text>Signup</Text>
+      </TouchableOpacity>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 16,
+    marginHorizontal: 16
   },
+  button: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10
+  }
 });
+function mapStateToProps(state) {
+  return { state: state };
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    signup: (email, password) =>
+      dispatch(registration_post_restauth_registration_create(email, password))
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);
