@@ -22,7 +22,7 @@ function testconnector_post__create(action) {
   return testConnector.post(`/`, { data: action.data })
 }
 function registration_post_restauth_registration_create(action) {
-  return registration.post(`/rest-auth/registration/`, { data: action.data })
+  return registration.post(`/rest-auth/registration/`, null, { data: action.data })
 }
 function api_v1_customtext_list(action) {
   return tstcrAPI.get(`/api/v1/customtext/`)
