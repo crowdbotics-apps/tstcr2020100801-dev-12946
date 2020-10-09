@@ -57,7 +57,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = dispatch => {
   return {
     signup: (email, password) =>
-      dispatch(testconnector_post__create(email, password))
+      dispatch(testconnector_post__create({email, password}))
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Blank);
