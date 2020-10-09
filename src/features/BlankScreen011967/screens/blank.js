@@ -24,11 +24,11 @@ class Blank extends React.Component {
     <View style={styles.container}>
       <Text>Welcome to Crowdbotics</Text>
       <TextInput
-        onChange={email => this.setState({ email: email })}
+        onChangeText={email => this.setState({ email: email })}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
       />
       <TextInput
-        onChange={password => this.setState({ password: password })}
+        onChangeText={password => this.setState({ password: password })}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
       />
       <TouchableOpacity
