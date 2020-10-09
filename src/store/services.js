@@ -16,7 +16,7 @@ const tstcrAPI = axios.create({
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function test2_post__create(action) {
-  return test.post(`/`, { data: action.data })
+  return test.post(`/`, null, { data: action.data })
 }
 function testconnector_post__create(action) {
   return testConnector.post(`/`, { data: action.data })
