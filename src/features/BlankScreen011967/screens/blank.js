@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { test2_post__create } from "../../../store/actions.js";
+import { registration_post_restauth_registration_create } from "../../../store/actions.js";
 import {
   View,
   Image,
@@ -57,7 +57,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = dispatch => {
   return {
     signup: (email, password) =>
-      dispatch(test2_post__create({email, password}))
+      dispatch(registration_post_restauth_registration_create({email, password}))
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Blank);
