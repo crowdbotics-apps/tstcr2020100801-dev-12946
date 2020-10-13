@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import {
   View,
   Image,
@@ -8,22 +8,22 @@ import {
   Button,
   Switch,
   TextInput,
-  StyleSheet
-} from "react-native"
-import DateTimePicker from "react-native-datepicker"
-import Icon from "react-native-vector-icons/FontAwesome"
-import Slider from "@react-native-community/slider"
-import { CheckBox } from "react-native-elements"
-import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
+  StyleSheet,
+} from 'react-native';
+import DateTimePicker from 'react-native-datepicker';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Slider from '@react-native-community/slider';
+import {CheckBox} from 'react-native-elements';
+import {SlideMenuIcon} from '../../../navigator/slideMenuIcon';
 
 export default class Blank extends React.Component {
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({navigation}) => {
     return {
-      headerLeft: <SlideMenuIcon navigationProps={navigation} />
-    }
-  }
+      headerLeft: <SlideMenuIcon navigationProps={navigation} />,
+    };
+  };
 
-  state = {}
+  state = {};
 
   render = () => (
     <View style={styles.View_1}>
@@ -37,13 +37,13 @@ export default class Blank extends React.Component {
         <View style={styles.View_7} />
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 16
+    marginHorizontal: 16,
   },
   View_1: {
     marginLeft: 0,
@@ -54,25 +54,25 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    overflow: "visible",
+    overflow: 'visible',
     fontSize: 12,
-    color: "#000000",
-    backgroundColor: "#ffffff",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderColor: "#000000",
-    borderStyle: "solid",
+    color: '#000000',
+    backgroundColor: '#ffffff',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+    borderColor: '#000000',
+    borderStyle: 'solid',
     borderWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0,
-    borderRadius: 0
+    borderRadius: 0,
   },
   View_5: {
     marginLeft: 0,
@@ -83,26 +83,25 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    overflow: "visible",
+    overflow: 'visible',
     fontSize: 12,
-    color: "#000000",
-    backgroundColor: "#ffffff",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderColor: "#000000",
-    borderStyle: "solid",
+    color: '#000000',
+    backgroundColor: '#ffffff',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+    borderColor: '#000000',
+    borderStyle: 'solid',
     borderWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0,
     borderRadius: 0,
-    backgroundSize: "auto"
   },
   View_50: {
     marginLeft: 0,
@@ -113,25 +112,25 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    overflow: "visible",
+    overflow: 'visible',
     fontSize: 12,
-    color: "#000000",
-    backgroundColor: "#ffffff",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderColor: "#000000",
-    borderStyle: "solid",
+    color: '#000000',
+    backgroundColor: '#ffffff',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+    borderColor: '#000000',
+    borderStyle: 'solid',
     borderWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0,
-    borderRadius: 0
+    borderRadius: 0,
   },
   Image_53: {
     height: 200,
@@ -143,15 +142,15 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    overflow: "visible",
-    borderColor: "#000000",
-    borderStyle: "solid",
+    overflow: 'visible',
+    borderColor: '#000000',
+    borderStyle: 'solid',
     borderWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0,
-    borderRadius: 0
+    borderRadius: 0,
   },
   View_6: {
     marginLeft: 0,
@@ -162,25 +161,25 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    overflow: "visible",
+    overflow: 'visible',
     fontSize: 12,
-    color: "#000000",
-    backgroundColor: "#ffffff",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderColor: "#000000",
-    borderStyle: "solid",
+    color: '#000000',
+    backgroundColor: '#ffffff',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+    borderColor: '#000000',
+    borderStyle: 'solid',
     borderWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0,
-    borderRadius: 0
+    borderRadius: 0,
   },
   View_7: {
     marginLeft: 0,
@@ -191,24 +190,24 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    overflow: "visible",
+    overflow: 'visible',
     fontSize: 12,
-    color: "#000000",
-    backgroundColor: "#ffffff",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderColor: "#000000",
-    borderStyle: "solid",
+    color: '#000000',
+    backgroundColor: '#ffffff',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+    borderColor: '#000000',
+    borderStyle: 'solid',
     borderWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
     borderBottomWidth: 0,
-    borderRadius: 0
-  }
-})
+    borderRadius: 0,
+  },
+});
