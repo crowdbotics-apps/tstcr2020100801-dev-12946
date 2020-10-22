@@ -30,6 +30,8 @@ urlpatterns = [
     # Override email confirm to use allauth's HTML view instead of rest_auth's API view
     path("rest-auth/registration/account-confirm-email/<str:key>/", confirm_email),
     path("rest-auth/registration/", include("rest_auth.registration.urls")),
+    path("api/v1/", include("dispatcher.api.v1.urls")),
+    path("home/", include("home.urls")),
 ]
 
 admin.site.site_header = "tstcr2020100801"
