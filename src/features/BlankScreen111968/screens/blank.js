@@ -1,6 +1,6 @@
 import React from "react"
 import {
-  View,
+  View, 
   Image,
   ImageBackground,
   TouchableOpacity,
